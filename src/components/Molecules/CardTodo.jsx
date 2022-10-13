@@ -81,10 +81,12 @@ const CardTodo = ({data, getListActivity}) => {
         }
         {/* Alert Info */}
         {
-                showAlert ?
+            showAlert ?
+            <div data-cy="modal-information">
                 <AlertInfo />
-                :
-                null
+            </div>
+            :
+            null
             }
     </div>
   )

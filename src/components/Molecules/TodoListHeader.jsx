@@ -67,7 +67,7 @@ const TodoListHeader = ({getListTodoItems}) => {
                 </button>
                 {
                     !isEdit ?
-                        <div data-cy="todo-title">
+                        <>
                             <Title 
                                 name={listDetailActivty.title} 
                                 className='text-4xl text-slate-800 font-bold'
@@ -76,7 +76,7 @@ const TodoListHeader = ({getListTodoItems}) => {
                             <buttons type='button' onClick={handleBtnEditTitle}>                    
                                 <i className='icon-pencil ml-10 mt-2'></i>
                             </buttons>
-                        </div>
+                        </>
                     :
                         <>
                             <input 
@@ -99,9 +99,9 @@ const TodoListHeader = ({getListTodoItems}) => {
                 }
             </div>
             <div className='flex flex-row'>
-                <ListGroup />   
-                <div data-cy="todo-add-button">
-                    <Button type="button" name="Tambah" icon="icon-plus mr-3" onClick={() => setShowModal(true)}/>
+                <ListGroup data-cy="todo-sort-button" />   
+                <div>
+                    <Button data-cy="todo-add-button" type="button" name="Tambah" icon="icon-plus mr-3" onClick={() => setShowModal(true)}/>
                 </div>             
             </div>
 

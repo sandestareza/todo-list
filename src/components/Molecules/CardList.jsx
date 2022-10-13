@@ -153,7 +153,7 @@ const CardList = ({data, getListTodoItems}) => {
             {/* Swal Confirm */}
             {
                 showSwal ?
-                <SwalConfirm setShowSwal={setShowSwal} data={data} handleDeleteTodo={()=>handleDeleteTodo()} textConfirm="Apakah anda yakin menghapus List Item"/>
+                <SwalConfirm data-cy="modal-delete" setShowSwal={setShowSwal} data={data} handleDeleteTodo={()=>handleDeleteTodo()} textConfirm="Apakah anda yakin menghapus List Item"/>
                 :
                 null
             }
