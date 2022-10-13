@@ -234,7 +234,9 @@ export default function Modal({setShowModal, getListTodoItems, isedit}) {
                                 />                                
                             </div>
                         </div>
-                        <ButtonModal handleSubmit={()=>handleSubmit()} isDisbledBtn={isDisbledBtn}/>
+                        <div data-cy="modal-add-save-button">
+                            <ButtonModal handleSubmit={()=>handleSubmit()} isDisbledBtn={isDisbledBtn}/>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -134,8 +134,8 @@ const CardList = ({data, getListTodoItems}) => {
                         <i className='icon-pencil w-5 h-5'></i>
                     </button>
                 </div>
-                <div>
-                    <button  data-cy="todo-item-delete-button" type='button' onClick={()=>{
+                <div data-cy="todo-item-delete-button">
+                    <button type='button' onClick={()=>{
                         setShowSwal(true)
 
                     }}>                    

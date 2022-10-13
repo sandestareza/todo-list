@@ -68,11 +68,13 @@ const TodoListHeader = ({getListTodoItems}) => {
                 {
                     !isEdit ?
                         <>
-                            <Title 
-                                name={listDetailActivty.title} 
-                                className='text-4xl text-slate-800 font-bold'
-                                data-cy="todo-title"
-                            />
+                            <div data-cy="todo-title">
+                                <Title 
+                                    name={listDetailActivty.title} 
+                                    className='text-4xl text-slate-800 font-bold'
+                                    data-cy="todo-title"
+                                />
+                            </div>
                             <button data-cy="todo-add-button" type='button' onClick={handleBtnEditTitle}>                    
                                 <i className='icon-pencil ml-10 mt-2'></i>
                             </button>
