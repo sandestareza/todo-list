@@ -205,23 +205,22 @@ export default function Modal({setShowModal, getListTodoItems, isedit}) {
                             <TitleModal setShowModal={setShowModal} isedit={isedit}/>
                         </div>
                         <div className="relative p-6 flex-auto">
-                            <div>
-                                <label data-cy="modal-label-add-edit" className="text-sm">NAMA LIST ITEM</label>
+                            <div data-cy="modal-add-name-input">
+                                <label className="text-sm">NAMA LIST ITEM</label>
                                 <input 
                                     type="text" 
                                     placeholder="Tambahkan nama Activity" 
                                     className="mt-3 block w-full p-2 text-base text-slate-500 bg-white bg-clip-padding border border-slate-400 rounded focus:outline-none focus:border-blue-300 focus:shadow-sm"
                                     value={values || ""}
-                                    onChange={handleChangeInput}
-                                    data-cy="modal-add-name-input"
+                                    onChange={handleChangeInput}                                    
                                 />
                             </div>
-                            <div className="mt-5">
-                                <label data-cy="modal-label-add-edit" className="text-sm">PRIORITY</label>
+                            <div data-cy="modal-add-priority-dropdown" className="mt-5">
+                                <label className="text-sm">PRIORITY</label>
                                 <Select 
                                     isSearchable={true}
                                     className="mt-3 w-56 text-base font-medium text-slate-500 bg-white bg-clip-padding rounded focus:outline-none focus:border-blue-300 focus:shadow-sm"
-                                    value={selectedOption ||  ""}
+                                    value={selectedOption || ""}
                                     options={data}
                                     onChange={handleChangeSelect}
                                     getOptionLabel={e => (
@@ -229,9 +228,8 @@ export default function Modal({setShowModal, getListTodoItems, isedit}) {
                                             <img src={e.icon} alt="indikator" />
                                             <span style={{ marginLeft:8 }}>{e.text}</span>
                                         </div>
-                                    )}
-                                    data-cy="modal-add-priority-dropdown"
-                                />                                
+                                    )}                                    
+                                />
                             </div>
                         </div>
                         <div data-cy="modal-add-save-button">

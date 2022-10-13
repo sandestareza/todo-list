@@ -160,7 +160,9 @@ const CardList = ({data, getListTodoItems}) => {
             {/* Alert Info */}
             {
                 showAlert ?
-                <AlertInfo />
+                <div data-cy="modal-information">
+                    <AlertInfo />
+                </div>
                 :
                 null
             }
