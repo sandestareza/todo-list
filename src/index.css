@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.icon-plus {
+    background-image: url('../src/assets/icons/tabler_plus.svg');
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon-back{
+    background-image: url('../src/assets/icons/todo-back-button.svg');
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.icon-pencil{
+    background-image: url('../src/assets/icons/todo-title-edit-button.svg');
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.icon-trash{
+    background-image: url('../src/assets/icons/activity-item-delete-button.svg');
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.icon-sort{
+    background-image: url('../src/assets/icons/tabler_arrows-sort.svg');
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
