@@ -113,7 +113,7 @@ const CardList = ({data, getListTodoItems}) => {
         <div data-cy="todo-items" className='w-full bg-white rounded-lg shadow py-7 px-5'>
             <div className='flex flex-row items-center justify-between'>
                 <div className='flex flex-row items-center'>
-                    <input data-cy="todo-items-checkbox" type="checkbox" className='w-5 h-5' onChange={handleChekedTodo} checked={data.is_active === 0 ? true : false}/>
+                    <input data-cy="todo-item-checkbox" type="checkbox" className='w-5 h-5' onChange={handleChekedTodo} checked={data.is_active === 0 ? true : false}/>
                     {
                         data.priority === 'very-high' ?
                             <img src={indikatorRed} alt="indikatorRed" className='mx-5' data-cy="todo-items-priority" />
@@ -129,13 +129,13 @@ const CardList = ({data, getListTodoItems}) => {
                         :
                             <img src={indikatorPurple} alt="indikatorRed" className='mx-5' data-cy="todo-items-priority" />
                     }
-                    <h6 data-cy="todo-items-title" className={`font-semibold text-xl mr-5 ${data.is_active === 0 ? 'text-slate-500 line-through' : ''}`}>{data.title}</h6>
+                    <h6 data-cy="todo-title" className={`font-semibold text-xl mr-5 ${data.is_active === 0 ? 'text-slate-500 line-through' : ''}`}>{data.title}</h6>
                     <button  data-cy="todo-items-button-edit" type='button' onClick={handleDetailEdit}>                    
                         <i className='icon-pencil w-5 h-5'></i>
                     </button>
                 </div>
                 <div>
-                    <button  data-cy="todo-items-button-delete" type='button' onClick={()=>{
+                    <button  data-cy="todo-item-delete-button" type='button' onClick={()=>{
                         setShowSwal(true)
 
                     }}>                    

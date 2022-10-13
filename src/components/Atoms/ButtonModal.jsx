@@ -8,7 +8,7 @@ const ButtonModal = ({handleSubmit, isDisbledBtn}) => {
                 type="button"
                 onClick={handleSubmit}
                 disabled={isDisbledBtn}
-                data-cy="modal-button-simpan"
+                data-cy="modal-add-save-button"
             >
                 SIMPAN
             </button>

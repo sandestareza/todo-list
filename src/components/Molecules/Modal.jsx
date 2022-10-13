@@ -213,7 +213,7 @@ export default function Modal({setShowModal, getListTodoItems, isedit}) {
                                     className="mt-3 block w-full p-2 text-base text-slate-500 bg-white bg-clip-padding border border-slate-400 rounded focus:outline-none focus:border-blue-300 focus:shadow-sm"
                                     value={values || ""}
                                     onChange={handleChangeInput}
-                                    data-cy="modal-input-add-edit"
+                                    data-cy="modal-add-name-input"
                                 />
                             </div>
                             <div className="mt-5">
@@ -230,7 +230,7 @@ export default function Modal({setShowModal, getListTodoItems, isedit}) {
                                             <span style={{ marginLeft:8 }}>{e.text}</span>
                                         </div>
                                     )}
-                                    data-cy="modal-select-add-edit"
+                                    data-cy="modal-add-priority-dropdown"
                                 />                                
                             </div>
                         </div>

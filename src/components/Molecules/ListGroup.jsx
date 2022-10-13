@@ -75,57 +75,57 @@ const ListGroup = () => {
 
     return (     
         <div className='relative'>
-                    <button className='rounded-full p-4 mr-3 flex items-center border' data-cy="todo-sort" onClick={()=>setShowSort(!showSort)}>
-                        <i className='icon-sort'></i>
-                    </button>
-                    {
-                        showSort &&
-                        <div className='absolute top-16 left-0'>
-                            <ul className="w-56 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200">
-                                <li onClick={()=>handleSelectSort('sort-last')} className="flex gap-x-2 hover:bg-slate-100 cursor-pointer py-3 px-4 w-full rounded-t-lg border-b border-gray-200">
-                                    <img src={SortLatest} alt='sort-latest'/>
-                                    Terbaru
-                                    {
-                                        checkedSortLast &&
-                                        <img src={SortChecked} alt='sort-checked' className='ml-auto'/>
-                                    }
-                                </li>
-                                <li onClick={()=>handleSelectSort('sort-desc')} className="flex gap-x-2 hover:bg-slate-100 cursor-pointer py-3 px-4 w-full border-b border-gray-200">
-                                    <img src={Sortoldest} alt='sort-oldest'/>
-                                    Terlama
-                                    {
-                                        checkedSortDesc &&
-                                        <img src={SortChecked} alt='sort-checked' className='ml-auto'/>
-                                    }
-                                </li>
-                                <li onClick={()=>handleSelectSort('sort-az')} className="flex gap-x-2 hover:bg-slate-100 cursor-pointer py-3 px-4 w-full border-b border-gray-200">
-                                    <img src={Sortaz} alt='sort-az'/>
-                                    A-Z
-                                    {
-                                        checkedSortAz &&
-                                        <img src={SortChecked} alt='sort-checked' className='ml-auto'/>
-                                    }
-                                </li>
-                                <li onClick={()=>handleSelectSort('sort-za')} className="flex gap-x-2 hover:bg-slate-100 cursor-pointer py-3 px-4 w-full rounded-b-lg">
-                                    <img src={Sortza} alt='sort-za'/>
-                                    Z-A
-                                    {
-                                        checkedSortZa &&
-                                        <img src={SortChecked} alt='sort-checked' className='ml-auto'/>
-                                    }
-                                </li>
-                                <li onClick={()=>handleSelectSort('sort-unfinished')} className="flex gap-x-2 hover:bg-slate-100 cursor-pointer py-3 px-4 w-full rounded-b-lg">
-                                    <img src={Sortunfinished} alt='sort-unfinished'/>
-                                    Belum Selesai
-                                    {
-                                        checkedSortUnfinished &&
-                                        <img src={SortChecked} alt='sort-checked' className='ml-auto'/>
-                                    }
-                                </li>
-                            </ul>
-                        </div>
-                    }
-                </div>   
+            <button data-cy="todo-sort-button" className='rounded-full p-4 mr-3 flex items-center border' onClick={()=>setShowSort(!showSort)}>
+                <i className='icon-sort'></i>
+            </button>
+            {
+                showSort &&
+                <div data-cy="sort-selection" className='absolute top-16 left-0'>
+                    <ul className="w-56 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200">
+                        <li data-cy="todo-sort-button" onClick={()=>handleSelectSort('sort-last')} className="flex gap-x-2 hover:bg-slate-100 cursor-pointer py-3 px-4 w-full rounded-t-lg border-b border-gray-200">
+                            <img src={SortLatest} alt='sort-latest'/>
+                            Terbaru
+                            {
+                                checkedSortLast &&
+                                <img src={SortChecked} alt='sort-checked' className='ml-auto'/>
+                            }
+                        </li>
+                        <li data-cy="todo-sort-button" onClick={()=>handleSelectSort('sort-desc')} className="flex gap-x-2 hover:bg-slate-100 cursor-pointer py-3 px-4 w-full border-b border-gray-200">
+                            <img src={Sortoldest} alt='sort-oldest'/>
+                            Terlama
+                            {
+                                checkedSortDesc &&
+                                <img src={SortChecked} alt='sort-checked' className='ml-auto'/>
+                            }
+                        </li>
+                        <li data-cy="todo-sort-button" onClick={()=>handleSelectSort('sort-az')} className="flex gap-x-2 hover:bg-slate-100 cursor-pointer py-3 px-4 w-full border-b border-gray-200">
+                            <img src={Sortaz} alt='sort-az'/>
+                            A-Z
+                            {
+                                checkedSortAz &&
+                                <img src={SortChecked} alt='sort-checked' className='ml-auto'/>
+                            }
+                        </li>
+                        <li data-cy="todo-sort-button" onClick={()=>handleSelectSort('sort-za')} className="flex gap-x-2 hover:bg-slate-100 cursor-pointer py-3 px-4 w-full rounded-b-lg">
+                            <img src={Sortza} alt='sort-za'/>
+                            Z-A
+                            {
+                                checkedSortZa &&
+                                <img src={SortChecked} alt='sort-checked' className='ml-auto'/>
+                            }
+                        </li>
+                        <li data-cy="todo-sort-button" onClick={()=>handleSelectSort('sort-unfinished')} className="flex gap-x-2 hover:bg-slate-100 cursor-pointer py-3 px-4 w-full rounded-b-lg">
+                            <img src={Sortunfinished} alt='sort-unfinished'/>
+                            Belum Selesai
+                            {
+                                checkedSortUnfinished &&
+                                <img src={SortChecked} alt='sort-checked' className='ml-auto'/>
+                            }
+                        </li>
+                    </ul>
+                </div>
+            }
+        </div>   
 
     )
 }

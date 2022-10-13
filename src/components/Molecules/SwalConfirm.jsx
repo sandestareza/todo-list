@@ -18,8 +18,8 @@ const SwalConfirm = ({setShowSwal, data, handleDeleteTodo, textConfirm}) => {
                             </h6>
                         </div>
                         <div className="flex gap-x-4 justify-center px-14 mt-10">
-                            <button onClick={()=>setShowSwal(false)} className='bg-slate-200 text-slate-800 font-bold rounded-full w-28 px-6 py-3'>Batal</button>
-                            <button onClick={handleDeleteTodo} className='bg-red-500 text-white rounded-full w-28 px-6 py-3'>Hapus</button>
+                            <button data-cy="modal-delete-cancel-button" onClick={()=>setShowSwal(false)} className='bg-slate-200 text-slate-800 font-bold rounded-full w-28 px-6 py-3'>Batal</button>
+                            <button data-cy="activity-item-delete-button" onClick={handleDeleteTodo} className='bg-red-500 text-white rounded-full w-28 px-6 py-3'>Hapus</button>
                         </div>
                     </div>    
                 </div>

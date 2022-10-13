@@ -73,7 +73,7 @@ const TodoListHeader = ({getListTodoItems}) => {
                                 className='text-4xl text-slate-800 font-bold'
                                 data-cy="todo-title"
                             />
-                            <button data-cy="todo-edit-title-button" type='button' onClick={handleBtnEditTitle}>                    
+                            <button data-cy="todo-add-button" type='button' onClick={handleBtnEditTitle}>                    
                                 <i className='icon-pencil ml-10 mt-2'></i>
                             </button>
                         </>
@@ -99,8 +99,10 @@ const TodoListHeader = ({getListTodoItems}) => {
                 }
             </div>
             <div className='flex flex-row'>
-                <ListGroup />                
-                <Button data-cy="todo-add-button" type="button" name="Tambah" icon="icon-plus mr-3" onClick={() => setShowModal(true)}/>
+                <ListGroup />   
+                <div data-cy="todo-add-button">
+                    <Button type="button" name="Tambah" icon="icon-plus mr-3" onClick={() => setShowModal(true)}/>
+                </div>             
             </div>
 
             {/* Modal */}

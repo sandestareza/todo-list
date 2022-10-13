@@ -68,7 +68,7 @@ const DetailContent = ({id}) => {
     }, [])
 
     return (
-        <div data-cy="detail-content" className='container mx-auto lg:px-36 px-10 mt-20'>
+        <div data-cy="activity-item" className='container mx-auto lg:px-36 px-10 mt-20'>
             <TodoListHeader getListTodoItems={()=>getListTodoItems()} />
             {
                 listTodos.length ? 

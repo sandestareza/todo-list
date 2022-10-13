@@ -54,15 +54,15 @@ const CardTodo = ({data, getListActivity}) => {
   }
 
   return (
-    <div className='h-56 bg-white rounded-xl p-5 shadow relative'>
+    <div data-cy="activity-item" className='h-56 bg-white rounded-xl p-5 shadow relative'>
         <Link to={`/detail/${data.id}`}>
-            <div  data-cy="activity-items-title" className='cursor-pointer h-56'>
+            <div  data-cy="activity-item-title" className='cursor-pointer h-56'>
                 <Title name={data.title} className="text-slate-800 text-xl font-bold"/>            
             </div>
         </Link>
         <div className='absolute z-10 w-full left-0 bottom-6 flex justify-between border-none px-5'>
             <span data-cy="activity-item-date" className='text-[#888]'>{formatDate(data.created_at)}</span>
-            <button data-cy="activity-item-delete" onClick={()=>setShowSwal(true)}>
+            <button data-cy="activity-item-delete-button" onClick={()=>setShowSwal(true)}>
               <img src={IconDelete} alt="icon-delete" />
             </button>
         </div>
