@@ -8,15 +8,19 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import { getActivity } from '../../service/todoSlice'
 
+
 const DashboardContent = () => {
 
     const {listActivity} = useSelector((state) => state.todos)
-
-    const dispatch = useDispatch()
     
+    const dispatch = useDispatch()
+
     const getListActivity = async () => {
 
-        const baseUrl = "https://todo.api.devcode.gethired.id/activity-groups?email=sandesta24@gmail.com"  
+        const email = localStorage.getItem('email')
+
+        const baseUrl = `https://todo.api.devcode.gethired.id/activity-groups?email=${email}`
+
     
         try {
 
@@ -63,7 +67,7 @@ const DashboardContent = () => {
                     <div data-cy="activity-items-empty" className='flex justify-center items-center mt-20'>
                         <img src={ImgEmptyData} />
                     </div>
-            }
+            }            
         </div>
     )
 }

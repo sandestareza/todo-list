@@ -90,6 +90,7 @@ const TodoListHeader = ({getListTodoItems}) => {
                                         handleEditTitle()
                                     }
                                 }}
+                                onBlur={()=>setIsEdit(false)}
                                 data-cy="todo-input-title"
                             />
                             <button data-cy="todo-edit-title-button" type='button' onClick={handleEditTitle}>                    
